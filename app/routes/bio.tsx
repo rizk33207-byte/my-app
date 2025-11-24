@@ -2,8 +2,8 @@ import type { Route } from "./+types/bio";
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "About Me | Freelance Developer" },
-        { name: "description", content: "Learn more about my background, skills, and experience as a freelance developer." },
+        { title: "About Me | Mahmoud Rizk" },
+        { name: "description", content: "Learn more about my background, skills, and experience as a Full Stack Developer." },
     ];
 }
 
@@ -22,21 +22,21 @@ export default function Bio() {
                         {/* Image Border Effect */}
                         <div className="absolute inset-0 border-2 border-pink-500/50 rounded-2xl translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
                         <img
-                            src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Developer Workspace"
-                            className="w-full rounded-2xl border border-white/10 shadow-2xl"
+                            src="/images/mahmoud-rizk.jpg"
+                            alt="Mahmoud Rizk"
+                            className="w-full rounded-2xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
                         />
                     </div>
 
                     <div>
                         <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                            Passionate about{" "}
+                            Mahmoud Rizk <br />
                             <span className="bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent">
-                                Clean Code
+                                Full Stack Developer
                             </span>
                         </h3>
                         <p className="text-lg text-neutral-400 mb-6 leading-relaxed">
-                            I am a dedicated freelance developer with a passion for building scalable and beautiful web solutions. With years of experience in full-stack development, I help businesses transform their ideas into reality.
+                            I am a dedicated Full Stack Developer with a passion for building scalable and beautiful web solutions. With years of experience in both frontend and backend development, I help businesses transform their ideas into reality.
                         </p>
                         <p className="text-lg text-neutral-400 mb-8 leading-relaxed">
                             My approach combines technical expertise with a keen eye for design, ensuring that every project I deliver is not only functional but also visually stunning.

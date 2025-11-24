@@ -17,14 +17,13 @@ export default function Home() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <p className="text-xl text-indigo-400 font-semibold mb-6 uppercase tracking-[0.2em] animate-fade-in-down">
-          Freelance Developer
+          Mahmoud Rizk
         </p>
         <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in-up delay-[200ms]">
-          Building Digital <br />
+          Full Stack <br />
           <span className="bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent">
-            Experiences
+            Developer
           </span>
-          That Matter
         </h1>
         <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-[400ms] leading-relaxed">
           I craft high-performance websites and applications with a focus on premium design and seamless user experience.
