@@ -3,7 +3,7 @@ import type { Route } from "./+types/bio";
 export function meta({ }: Route.MetaArgs) {
     return [
         { title: "About Me | Mahmoud Rizk" },
-        { name: "description", content: "Learn more about my background, skills, and experience as a Full Stack Developer." },
+        { name: "description", content: "Learn more about my background, skills, and experience as a Frontend Developer." },
     ];
 }
 
@@ -32,11 +32,11 @@ export default function Bio() {
                         <h3 className="text-2xl md:text-3xl font-bold mb-6">
                             Mahmoud Rizk <br />
                             <span className="bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent">
-                                Full Stack Developer
+                                Frontend Developer
                             </span>
                         </h3>
                         <p className="text-lg text-neutral-400 mb-6 leading-relaxed">
-                            I am a dedicated Full Stack Developer with a passion for building scalable and beautiful web solutions. With years of experience in both frontend and backend development, I help businesses transform their ideas into reality.
+                            I am a dedicated Frontend Developer with a passion for building scalable and beautiful web solutions. With years of experience in both frontend and backend development, I help businesses transform their ideas into reality.
                         </p>
                         <p className="text-lg text-neutral-400 mb-8 leading-relaxed">
                             My approach combines technical expertise with a keen eye for design, ensuring that every project I deliver is not only functional but also visually stunning.

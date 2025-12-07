@@ -23,19 +23,19 @@ export default function Contact() {
 
                         <div className="flex flex-col gap-6">
                             <a
-                                href="mailto:hello@example.com"
+                                href="mailto:rizk33207@gmail.com"
                                 className="flex items-center justify-center gap-4 p-4 rounded-xl text-lg hover:bg-white/5 transition-colors group"
                             >
                                 <i className="fas fa-envelope text-indigo-500 text-2xl group-hover:scale-110 transition-transform"></i>
-                                <span>hello@example.com</span>
+                                <span>rizk33207@gmail.com</span>
                             </a>
 
                             <a
-                                href="tel:+1234567890"
+                                href="tel:+20679832502"
                                 className="flex items-center justify-center gap-4 p-4 rounded-xl text-lg hover:bg-white/5 transition-colors group"
                             >
                                 <i className="fas fa-phone text-indigo-500 text-2xl group-hover:scale-110 transition-transform"></i>
-                                <span>+1 (234) 567-890</span>
+                                <span>+2010679832502</span>
                             </a>
 
                             <div className="flex items-center justify-center gap-4 p-4 rounded-xl text-lg hover:bg-white/5 transition-colors group">

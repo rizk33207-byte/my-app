@@ -36,6 +36,13 @@ export default function Home() {
             Hire Me
           </Link>
           <Link
+            to="https://mahmoud-rizk-cv.vercel.app/"
+            target="_blank"
+            className="px-8 py-4 rounded-full font-semibold text-base bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-lg shadow-indigo-500/40 hover:-translate-y-1 hover:shadow-indigo-500/60 transition-all duration-300"
+          >
+            View CV
+          </Link>
+          <Link
             to="/services"
             className="px-8 py-4 rounded-full font-semibold text-base bg-transparent text-white border border-white/20 hover:bg-white/5 hover:border-white transition-all duration-300"
           >

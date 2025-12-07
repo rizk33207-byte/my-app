@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, Link } from "react-router";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function Header() {
                     </NavLink>
 
                     {/* Desktop Menu */}
-                    <ul className="flex gap-8 hidden md:flex">
+                    <ul className="flex gap-8 hidden md:flex items-center">
                         <li>
                             <NavLink
                                 to="/"
@@ -72,6 +72,15 @@ export default function Header() {
                             >
                                 Contact
                             </NavLink>
+                        </li>
+                        <li>
+                            <Link
+                                to="https://mahmoud-rizk-cv.vercel.app/"
+                                target="_blank"
+                                className="px-6 py-2 rounded-full font-semibold text-sm bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-lg shadow-indigo-500/40 hover:opacity-90 transition-all duration-300"
+                            >
+                                View CV
+                            </Link>
                         </li>
                     </ul>
 
@@ -140,6 +149,16 @@ export default function Header() {
                         >
                             Contact
                         </NavLink>
+                    </li>
+                    <li>
+                        <Link
+                            to="https://mahmoud-rizk-cv.vercel.app/"
+                            target="_blank"
+                            className="inline-block px-8 py-3 rounded-full font-semibold text-xl bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-lg shadow-indigo-500/40 hover:opacity-90 transition-all duration-300"
+                            onClick={closeMenu}
+                        >
+                            View CV
+                        </Link>
                     </li>
                 </ul>
             </div>
