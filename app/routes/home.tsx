@@ -20,7 +20,7 @@ export default function Home() {
           Mahmoud Rizk
         </p>
         <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in-up delay-[200ms]">
-          Full Stack <br />
+          Frontend <br />
           <span className="bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent">
             Developer
           </span>
