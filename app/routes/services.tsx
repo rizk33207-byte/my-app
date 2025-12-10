@@ -1,87 +1,89 @@
 import type { Route } from "./+types/services";
+import ServiceCard from "../components/ServiceCard";
+import SkillBadge from "../components/SkillBadge";
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "Services | Freelance Developer" },
-        { name: "description", content: "Web development, UI/UX design, and other services I offer." },
+        { title: "Services & Skills | Mahmoud Rizk" },
+        { name: "description", content: "Professional web development services and technical skills overview." },
     ];
 }
 
 export default function Services() {
+    const services = [
+        {
+            title: "Landing Pages",
+            description: "High-conversion, visually stunning landing pages designed to capture attention and drive action. Optimized for speed and responsiveness.",
+            icon: "fas fa-rocket",
+        },
+        {
+            title: "Dashboard Development",
+            description: "Complex data visualization and management dashboards. Intuitive interfaces for handling large datasets and user workflows.",
+            icon: "fas fa-chart-line",
+        },
+        {
+            title: "E-Commerce Solutions",
+            description: "Full-featured online stores with secure payment integration, product management, and seamless shopping experiences.",
+            icon: "fas fa-shopping-cart",
+        },
+        {
+            title: "API Integration",
+            description: "Seamless integration of third-party APIs (Stripe, Google Maps, Social Media) to extend application functionality.",
+            icon: "fas fa-plug",
+        },
+        {
+            title: "Responsive Web Design",
+            description: "Websites that look and function perfectly on all devices, from mobile phones to large desktop screens.",
+            icon: "fas fa-mobile-alt",
+        },
+    ];
+
+    const skills = [
+        { name: "Next.js", icon: "fab fa-react" },
+        { name: "React", icon: "fab fa-react" },
+        { name: "Tailwind CSS", icon: "fab fa-css3-alt" },
+        { name: "JavaScript (ES6+)", icon: "fab fa-js" },
+        { name: "TypeScript", icon: "fas fa-code" },
+        { name: "Node.js", icon: "fab fa-node" },
+        { name: "Git & GitHub", icon: "fab fa-git-alt" },
+        { name: "REST APIs", icon: "fas fa-server" },
+        { name: "Problem Solving", icon: "fas fa-puzzle-piece" },
+        { name: "Communication", icon: "fas fa-comments" },
+    ];
+
     return (
-        <section id="services" className="pt-32 pb-20">
-            <div className="max-w-[1200px] mx-auto px-8">
-                <div className="text-center mb-16 relative">
-                    <h2 className="text-3xl md:text-5xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-3 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500 after:rounded-full">
-                        My Services
-                    </h2>
+        <section className="min-h-screen pt-24 pb-20 px-6 relative">
+            <div className="max-w-6xl mx-auto">
+
+                {/* Header */}
+                <div className="text-center mb-20 animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                        My <span className="bg-linear-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Expertise</span>
+                    </h1>
+                    <p className="text-neutral-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                        I bring a blend of technical precision and creative design to every project. Here's how I can help you succeed.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Service Card 1 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-code"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Web Development</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Custom websites built with modern technologies like HTML5, CSS3, JavaScript, and React. Fast, responsive, and SEO-friendly.
-                        </p>
+                {/* Skills Section */}
+                <div className="mb-20 animate-fade-in-up delay-200">
+                    <h2 className="text-2xl font-bold mb-8 text-center text-white">Technical <span className="text-indigo-400">Skills</span></h2>
+                    <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                        {skills.map((skill, index) => (
+                            <SkillBadge key={index} {...skill} />
+                        ))}
                     </div>
+                </div>
 
-                    {/* Service Card 2 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-paint-brush"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Creating intuitive and visually appealing user interfaces that provide an exceptional user experience across all devices.
-                        </p>
-                    </div>
-
-                    {/* Service Card 3 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Responsive Design</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Ensuring your website looks and performs perfectly on desktops, tablets, and mobile phones.
-                        </p>
-                    </div>
-
-                    {/* Service Card 4 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-rocket"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Performance Optimization</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Speeding up your existing website to improve user retention and search engine rankings.
-                        </p>
-                    </div>
-
-                    {/* Service Card 5 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">E-Commerce</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Building secure and user-friendly online stores to help you sell your products effectively.
-                        </p>
-                    </div>
-
-                    {/* Service Card 6 */}
-                    <div className="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-indigo-500/10 group">
-                        <div className="text-4xl mb-4 bg-gradient-to-br from-indigo-500 to-pink-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
-                            <i className="fas fa-server"></i>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Backend Solutions</h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed">
-                            Robust server-side logic and database management to power your applications.
-                        </p>
+                {/* Services Grid */}
+                <div>
+                    <h2 className="text-2xl font-bold mb-10 text-center text-white">Professional <span className="text-pink-500">Services</span></h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {services.map((service, index) => (
+                            <div key={index} className={`animate-fade-in-up delay-[${(index + 3) * 100}ms]`}>
+                                <ServiceCard {...service} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

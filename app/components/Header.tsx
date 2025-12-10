@@ -30,7 +30,7 @@ export default function Header() {
                                 to="/"
                                 className={({ isActive }) =>
                                     `font-medium relative transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
-                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
+                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-linear-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
                                     }`
                                 }
                             >
@@ -39,10 +39,22 @@ export default function Header() {
                         </li>
                         <li>
                             <NavLink
+                                to="/projects"
+                                className={({ isActive }) =>
+                                    `font-medium relative transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
+                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-linear-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
+                                    }`
+                                }
+                            >
+                                Projects
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
                                 to="/bio"
                                 className={({ isActive }) =>
                                     `font-medium relative transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
-                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
+                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-linear-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
                                     }`
                                 }
                             >
@@ -54,7 +66,7 @@ export default function Header() {
                                 to="/services"
                                 className={({ isActive }) =>
                                     `font-medium relative transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
-                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
+                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-linear-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
                                     }`
                                 }
                             >
@@ -66,7 +78,7 @@ export default function Header() {
                                 to="/contact"
                                 className={({ isActive }) =>
                                     `font-medium relative transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
-                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
+                                    } after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-linear-to-r after:from-indigo-500 after:to-pink-500 after:transition-all ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
                                     }`
                                 }
                             >
@@ -112,6 +124,18 @@ export default function Header() {
                             onClick={closeMenu}
                         >
                             Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/projects"
+                            className={({ isActive }) =>
+                                `text-2xl font-medium transition-colors ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
+                                }`
+                            }
+                            onClick={closeMenu}
+                        >
+                            Projects
                         </NavLink>
                     </li>
                     <li>
